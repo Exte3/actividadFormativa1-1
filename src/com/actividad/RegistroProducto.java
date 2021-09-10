@@ -72,6 +72,7 @@ public class RegistroProducto {
 	public void listarTodosMedicamentos() {
 		for (int i = 0; i < this.medicamentos.size(); i++) {
 			System.out.println(this.medicamentos.get(i).toString());
+
 		}
 	}
 
