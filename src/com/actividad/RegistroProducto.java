@@ -72,7 +72,12 @@ public class RegistroProducto {
 	public void listarTodosMedicamentos() {
 		for (int i = 0; i < this.medicamentos.size(); i++) {
 			System.out.println(this.medicamentos.get(i).toString());
+		}
+	}
 
+	public void listarTodosSuplementos() {
+		for (int i = 0; i < this.suplementos.size(); i++) {
+			System.out.println(this.suplementos.get(i).toString());
 		}
 	}
 
@@ -117,6 +122,12 @@ public class RegistroProducto {
 			if (!this.medicamentos.get(i).getGenerico()) {
 				this.medicamentos.get(i).setPrecioBase(this.medicamentos.get(i).getPrecioBase() * 1.2);
 			}
+		}
+	}
+
+	public void recargarSuplementos() {
+		for (int i = 0; i < this.suplementos.size(); i++) {
+			this.suplementos.get(i).setPrecioBase(this.suplementos.get(i).getPrecioBase() + (this.suplementos.get(i).getPrecioBase() * 0.02) * this.suplementos.get(i).getCantidadVitaminas());
 		}
 	}
 
