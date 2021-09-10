@@ -54,6 +54,14 @@ public class Medicamento {
 	public void setContraindicaciones(String contraindicaciones) {
 		this.contraindicaciones = contraindicaciones;
 	}
+
+	@Override
+	public String toString() {
+		return "Medicamento [codigo=" + codigo + ", precioBase=" + precioBase + ", nombre=" + nombre + ", generico="
+				+ generico + ", contraindicaciones=" + contraindicaciones + "]";
+	}
+	
+	
 	
 	
 }

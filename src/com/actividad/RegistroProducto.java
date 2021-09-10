@@ -61,6 +61,39 @@ public class RegistroProducto {
 	}
 
 
+
+	
+	//3. Listar todos los Productos(Medicamento o Suplemento Alimenticio) que tengan un precio base superior a los $10000.
+	public void listarMedicamentos() {
+		//Precio base > 10000
+		for (int i=0;i<this.medicamentos.size();i++) {
+			if(this.medicamentos.get(i).getPrecioBase() > 10000) {
+				System.out.println(this.medicamentos.get(i).toString());
+			}
+		}
+	}
+	
+	public void listarSuplementos() {
+		//Precio base > 10000
+		for (int i=0;i<this.suplementos.size();i++) {
+			if(this.suplementos.get(i).getPrecioBase() > 10000) {
+				System.out.println(this.suplementos.get(i).toString());
+			}
+		}
+	}
+	
+	
+	//4. Eliminar Producto: Eliminará todos los Productos cuyo precio base es menor a $2.000, indicando cuántos fueron
+	
+	public void eliminarMedicamentos() {
+		this.medicamentos.removeIf( e -> e.getPrecioBase() < 2000);	
+	}
+
+	public void eliminarSuplementos() {
+		this.medicamentos.removeIf( e -> e.getPrecioBase() < 2000);	
+	}
+	
+	
 	public ArrayList<Medicamento> getMedicamentos() {
 		return medicamentos;
 	}
@@ -80,9 +113,5 @@ public class RegistroProducto {
 		this.suplementos = suplementos;
 	}
 	
-	
-	//3. Listar todos los Productos(Medicamento o Suplemento Alimenticio) que tengan un precio base superior a los $10000.
-	
-	//4. Eliminar Producto: Eliminará todos los Productos cuyo precio base es menor a $2.000, indicando cuántos fueron
 	
 }

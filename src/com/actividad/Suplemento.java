@@ -53,5 +53,11 @@ public class Suplemento {
 	public void setInformacionVitaminas(String informacionVitaminas) {
 		this.informacionVitaminas = informacionVitaminas;
 	}
+	@Override
+	public String toString() {
+		return "Suplemento [codigo=" + codigo + ", precioBase=" + precioBase + ", nombre=" + nombre
+				+ ", cantidadVitaminas=" + cantidadVitaminas + ", informacionVitaminas=" + informacionVitaminas + "]";
+	}
 	
+
 }
